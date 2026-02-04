@@ -53,10 +53,10 @@ function ResearchCard({
                         target="_blank"
                         rel="noreferrer"
                         aria-label="Codebase"
+                        title="Codebase"
                         style={{ color: theme.tertiary }}
                     >
                         <FaCode />
-                        <span>Codebase</span>
                     </a>
                 )}
             </div>

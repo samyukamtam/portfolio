@@ -22,7 +22,7 @@ export const educationData = [
         institution: 'New York University',
         course: 'M.S. in Mechatronics and Robotics',
         subtext: 'Specialization: Assistive Robotics',
-        courses: ['Robot Perception', 'Embedded Systems', 'Control Systems', 'Human-Robot Interaction'],
+        courses: ['Reinforcement Learning', 'Interactive Medical Robotics', 'Designing Assistive Technology', 'Mechatronics'],
         institutionUrl: 'https://engineering.nyu.edu/',
         programUrl: 'https://engineering.nyu.edu/academics/programs/mechatronics-and-robotics-ms',
         startYear: '2024',

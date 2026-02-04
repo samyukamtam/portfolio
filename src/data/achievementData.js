@@ -1,3 +1,7 @@
+import icraImage from '../assets/png/icra.jpeg'
+import acmImage from '../assets/png/acm.jpeg'
+import compsacImage from '../assets/png/compsac.jpeg'
+
 export const achievementData = {
     bio : "",
     achievements : [
@@ -7,7 +11,7 @@ export const achievementData = {
             details : 'IEEE ICRA 2025 Workshop',
             date : 'January 2025',
             field : 'Computer Vision',
-            image : ''
+            image : icraImage
             //developer-portfolio/src/assets/pdf/6_Towards_Robust_Bronchoscopic.pdf
         },
         {
@@ -16,7 +20,7 @@ export const achievementData = {
             details : 'ACM MobiHoc 2024',
             date : 'January 2023',
             field : 'Computer Networks',
-            image : ''
+            image : acmImage
         },
         {
             id : 3,
@@ -24,7 +28,7 @@ export const achievementData = {
             details : 'IEEE COMPSAC 2023 (AINet)',
             date : 'May 2023',
             field : 'Computer Networks',
-            image : ''
+            image : compsacImage
         }
 
     ]

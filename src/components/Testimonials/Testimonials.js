@@ -65,18 +65,6 @@ function Testimonials() {
                                     >
                                         <div className='testimonials--container'>
                                             <div
-                                                className='review--img'
-                                                style={{
-                                                    backgroundColor:
-                                                        theme.secondary,
-                                                }}
-                                            >
-                                                <img
-                                                    src={test.image}
-                                                    alt={test.name}
-                                                />
-                                            </div>
-                                            <div
                                                 className='review--content'
                                                 style={{
                                                     backgroundColor:

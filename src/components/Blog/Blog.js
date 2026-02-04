@@ -65,7 +65,7 @@ function Blog() {
                         </div> 
 
                         <div className="projects--viewAll">
-                            <Link to="/blog">
+                            <Link to="/research">
                                 <button className={classes.viewAllBtn}>
                                     Expand
                                     <HiArrowRight className={classes.viewArr} />

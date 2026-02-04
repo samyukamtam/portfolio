@@ -51,6 +51,14 @@ export const testimonialsData = [
         text: "A student entrepreneurship program covering business concepts.",
         image: boy3
     }
+    ,
+    {
+        id: 7,
+        name: 'Kuchipudi dancer',
+        title: '18 years of training',
+        text: "Professional classical dancer.",
+        image: boy2
+    }
     // {
     //     id: 7,
     //     name: 'Kuchipudi Dancer',
@@ -59,4 +67,3 @@ export const testimonialsData = [
     //     image: boy3
     // }
 ]
-
