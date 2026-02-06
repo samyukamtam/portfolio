@@ -21,7 +21,7 @@ export const blogData = [
     },
     {
         id: 2,
-        title: 'Planning and Control in Narrow Corridors',
+        title: 'ASAS Labs, Planning and Control in Narrow Corridors',
         description: 'Developing a path planning algorithm for high-speed autonomous navigation in narrow environments. Modifying ROS2 Nav2 to generate smooth spline-based trajectories. Implementing cost-effective object inflation to minimize spatial redundancy and enhance maneuverability. Experimenting with A* and hybrid variants for optimized real-time path generation under constrained spaces.',
         date: 'September 2025 - Present',
         image: autoImg,
@@ -29,10 +29,12 @@ export const blogData = [
         tools: ['ROS2', 'Nav2', 'C++', 'Python','Shapely'],
         details: [
             'Developing a path planning algorithm for high-speed autonomous navigation in narrow environments. Modifying ROS2 Nav2 to generate smooth spline-based trajectories.',
-            'Implementing cost-effective object inflation to minimize spatial redundancy and enhance maneuverability. Experimenting with A* and hybrid variants for optimized real-time path generation under constrained spaces.'
+            'Implementing cost-effective object inflation to minimize spatial redundancy and enhance maneuverability. Experimenting with A* and hybrid variants for optimized real-time path generation under constrained spaces.',
+            'Agentic AI for safe and secure autonomous robotic systems',
+            'Project funded by NokiaBell Labs.'
         ],
-        url: '',
-        code: 'https://example.com/code-placeholder'
+        url: 'https://wp.nyu.edu/asas_labs/about-project/',
+        code: 'https://github.com/ASAS-Labs'
     },
         {
         id: 3,
