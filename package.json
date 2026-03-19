@@ -1,6 +1,6 @@
 {
-  "homepage": "http://samyukamtam.github.io/portfolio",
-  "name": "developer-portfolio",
+  "homepage": "https://samyukamtam.github.io/portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,7 +25,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeply":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -57,11 +57,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samyukamtam/developer-portfolio.git"
+    "url": "git+https://github.com/samyukamtam/portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samyukamtam/developer-portfolio/issues"
+    "url": "https://github.com/samyukamtam/portfolio/issues"
   }
 }

@@ -1,4 +1,4 @@
- export const skillsData = [
+export const skillsData = [
     'Python',
     'C',
     'C++',
@@ -11,6 +11,33 @@
     'Tensorflow',
     'OpenCV',
     'Firebase',
+]
+
+export const skillsCategories = [
+    {
+        title: 'Robotics & Simulation',
+        skills: ['Matlab'],
+    },
+    {
+        title: 'Machine Learning & AI',
+        skills: ['Numpy', 'Pytorch', 'Tensorflow', 'OpenCV'],
+    },
+    {
+        title: 'Frameworks & Libraries',
+        skills: ['OpenCV', 'Numpy', 'Pytorch', 'Tensorflow'],
+    },
+    {
+        title: 'Tools & Platforms',
+        skills: ['Git', 'Firebase'],
+    },
+    {
+        title: 'Computer Science',
+        skills: ['Python', 'C', 'C++', 'HTML', 'JavaScript'],
+    },
+    {
+        title: 'Other',
+        skills: ['Data Analysis', 'Stastical Modeling', 'Biostastics'],
+    },
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

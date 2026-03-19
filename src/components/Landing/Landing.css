@@ -101,6 +101,34 @@
   font-family: "var(--primaryFont)", sans-serif;
 }
 
+.cv-selectWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-select {
+  width: 180px;
+  height: 56px;
+  border-radius: 30px;
+  padding: 0 44px 0 16px;
+  border: 3px solid #e0b24c;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23e0b24c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+    no-repeat right 16px center;
+  background-size: 20px 20px;
+  color: inherit;
+  font-family: var(--primaryFont);
+  font-size: 1rem;
+  font-weight: 500;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.cv-select option {
+  color: #1b1b1b;
+}
+
 @media (max-width: 1100px) {
   .landing--img {
     --img-size: 350px;
@@ -130,6 +158,10 @@
     width: 200px;
     height: 120px;
     align-items: flex-start;
+  }
+
+  .cv-select {
+    width: 200px;
   }
 }
 

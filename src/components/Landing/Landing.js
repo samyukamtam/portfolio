@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { Button } from '@material-ui/core';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
@@ -60,6 +60,26 @@ function Landing() {
     }));
 
     const classes = useStyles();
+    const resumeOptions = useMemo(
+        () =>
+            Array.isArray(headerData.resumes) && headerData.resumes.length > 0
+                ? headerData.resumes
+                : [{ label: 'Resume', file: headerData.resumePdf }],
+        []
+    );
+    const [selectedResume, setSelectedResume] = useState('download');
+
+    const triggerResumeDownload = (file) => {
+        if (!file) return;
+        const link = document.createElement('a');
+        link.href = file;
+        link.download = 'resume';
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <div className='landing'>
@@ -119,17 +139,37 @@ function Landing() {
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
-                            {headerData.resumePdf && (
-                                <a
-                                    href={headerData.resumePdf}
-                                    download='resume'
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <Button className={classes.resumeBtn}>
-                                        Download CV
-                                    </Button>
-                                </a>
+                            {resumeOptions[0]?.file && (
+                                <div className='cv-selectWrapper'>
+                                    <select
+                                        className='cv-select'
+                                        value={selectedResume}
+                                        onChange={(e) => {
+                                            const value = e.target.value;
+                                            setSelectedResume(value);
+                                            if (value === 'download') return;
+                                            const next = resumeOptions.find(
+                                                (option) =>
+                                                    option.label === value
+                                            );
+                                            triggerResumeDownload(next?.file);
+                                            setSelectedResume('download');
+                                        }}
+                                        aria-label='Download CV'
+                                    >
+                                        <option value='download'>
+                                            Download CV
+                                        </option>
+                                        {resumeOptions.map((option) => (
+                                            <option
+                                                key={option.label}
+                                                value={option.label}
+                                            >
+                                                {option.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
                             )}
                             <NavLink
                                 to='/#contacts'

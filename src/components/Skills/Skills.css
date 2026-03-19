@@ -171,3 +171,11 @@
 @media only screen and (device-width: 768px) {
 
 }
+.skills-link {
+    text-decoration: none;
+    width: 100%;
+}
+
+.skills-link .skills {
+    cursor: pointer;
+}
