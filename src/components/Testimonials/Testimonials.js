@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 
 import Slider from 'react-slick';
 
-import { FaQuoteLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { testimonialsData } from '../../data/testimonialsData';
@@ -49,10 +49,6 @@ function Testimonials() {
                         <h1 style={{ color: theme.secondary }}>Miscellaneous</h1>
                     </div>
                     <div className='testimonials--body'>
-                        <FaQuoteLeft
-                            className='quote'
-                            style={{ color: theme.secondary }}
-                        />
                         <div
                             className='testimonials--slider'
                             style={{ backgroundColor: theme.primary }}

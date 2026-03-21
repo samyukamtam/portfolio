@@ -139,7 +139,7 @@ function Landing() {
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
-                            {resumeOptions[0]?.file && (
+                            {/* {resumeOptions[0]?.file && (
                                 <div className='cv-selectWrapper'>
                                     <select
                                         className='cv-select'
@@ -170,7 +170,7 @@ function Landing() {
                                         ))}
                                     </select>
                                 </div>
-                            )}
+                            )} */}
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}

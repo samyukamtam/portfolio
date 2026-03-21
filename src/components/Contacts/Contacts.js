@@ -122,9 +122,9 @@ function Contacts() {
         if (name && email && message) {
             if (isEmail(email)) {
                 const responseData = {
-                    name: name,
-                    email: email,
-                    message: message,
+                    Name: name,
+                    Email: email,
+                    Message: message,
                 };
 
                 axios.post(contactsData.sheetAPI, responseData).then((res) => {
@@ -147,6 +147,13 @@ function Contacts() {
         }
     };
 
+    const handleFieldChange = (setter) => (e) => {
+        if (success) {
+            setSuccess(false);
+        }
+        setter(e.target.value);
+    };
+
     return (
         <div
             className='contacts'
@@ -165,7 +172,7 @@ function Contacts() {
                                 <input
                                     placeholder='John Doe'
                                     value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    onChange={handleFieldChange(setName)}
                                     type='text'
                                     name='Name'
                                     className={`form-input ${classes.input}`}
@@ -181,7 +188,7 @@ function Contacts() {
                                 <input
                                     placeholder='John@doe.com'
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={handleFieldChange(setEmail)}
                                     type='email'
                                     name='Email'
                                     className={`form-input ${classes.input}`}
@@ -197,7 +204,7 @@ function Contacts() {
                                 <textarea
                                     placeholder='Type your message....'
                                     value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
+                                    onChange={handleFieldChange(setMessage)}
                                     type='text'
                                     name='Message'
                                     className={`form-message ${classes.message}`}

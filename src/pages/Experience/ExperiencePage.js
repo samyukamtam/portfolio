@@ -93,8 +93,9 @@ function ExperiencePage() {
                     />
                 </div>
                 <div className="experience-categoryBar">
-                    <a href="#experience-startup" className="experience-categoryBtn">Startup</a>
+                    {/* <a href="#experience-startup" className="experience-categoryBtn">Startup</a> */}
                     <a href="#experience-robotics" className="experience-categoryBtn">Robotics</a>
+                    <a href="#experience-data-science" className="experience-categoryBtn">Data Science</a>
                     <a href="#experience-software" className="experience-categoryBtn">Software Engineering</a>
                 </div>
                 <div className="experiencePage-content">
@@ -122,11 +123,17 @@ function ExperiencePage() {
                                 alignItems="center"
                                 justifyContent="center"
                             >
-                                {['Startup', 'Robotics', 'Software Engineering'].map((group) => (
+                                {['Robotics', 'Data Science', 'Software Engineering'].map((group) => (
                                     <div
                                         key={group}
                                         className="experience-section"
-                                        id={group === 'Software Engineering' ? 'experience-software' : `experience-${group.toLowerCase()}`}
+                                        id={
+                                            group === 'Software Engineering'
+                                                ? 'experience-software'
+                                                : group === 'Data Science'
+                                                    ? 'experience-data-science'
+                                                    : `experience-${group.toLowerCase()}`
+                                        }
                                     >
                                         <h2 className="experience-sectionTitle" style={{color: theme.primary}}>{group}</h2>
                                         {filteredExperience
